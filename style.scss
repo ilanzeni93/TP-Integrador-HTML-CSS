@@ -1,0 +1,819 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+
+//resets
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//variables
+$rojo: #F22E3E;
+$azul: #168BF2;
+$verde: #2CBF60;
+$amarillo: #F2AE2E;
+$gris: #c9c5c5;
+
+//mixins
+@mixin fonts {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin button {
+    @include fonts;
+    background-color: $rojo;
+    border-radius: 50px;
+    border: 2px solid $rojo;
+    cursor: pointer;
+    color: white;
+    padding: 1% 1%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+header {
+    display: flex;
+    h1 {
+        display: none;
+    }
+    .aLogo{
+        margin: 2% 2% 2% 5%;
+        .logo {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        margin: 3% 1%;
+        width: 90%;
+        position: relative;
+        .navList {
+            display: inline;
+            .aLista {
+            @include fonts;
+            text-decoration: none;
+            list-style: none;
+            font-weight: 800;
+            color: rgb(117, 114, 114);
+            padding: 2% 3%;
+            font-size: 0.9em;
+            &:hover {
+                color: $rojo;
+                border-bottom: 4px solid $rojo;
+            }
+            }
+        }
+    }
+    .menu2 {
+        display: none;
+        position: absolute;
+        max-width: 160px;
+        padding: 2%;
+        top: 3%;
+        left: 80%;
+        z-index: 5;
+        .navList {
+            display: inline;
+            .aLista {
+            @include fonts;
+            text-decoration: none;
+            list-style: none;
+            font-weight: 800;
+            color: rgb(117, 114, 114);
+            padding: 2% 3%;
+            font-size: 0.9em;
+            &:hover {
+                color: $rojo;
+                border-bottom: 4px solid $rojo;
+            }
+            }
+        }
+    }
+}
+
+
+main {
+    .flyer {
+        position: relative;
+        background: linear-gradient(90deg, rgb(175, 174, 174) 43%, rgb(219, 217, 217) 71%);
+        margin: 1% 5%;
+        padding: 1% 3% 20% 3%;
+        border-radius: 30px;
+        .imgFlyer {
+            width: 35%;
+            height: auto;
+            margin-left: 40%;
+            padding-top: 5%;
+        }
+        .p1 {
+            @include fonts;
+            font-size: 1.5em;
+            font-weight: 800;
+            position: absolute;
+            top: 25%;
+            left: 10%; 
+        }
+        .p2 {
+            @include fonts;
+            font-size: 4em;
+            font-weight: 800;
+            position: absolute;
+            top: 30%;
+            left: 10%; 
+        }
+        .p3 {
+            @include fonts;
+            font-size: 8em;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: white;
+            position: absolute;
+            top: 40%;
+            left: 10%;
+        }
+        button {
+            @include button;
+            position: absolute;
+            top: 65%;
+            left: 10%;
+            width: 20%;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            &:hover {
+                background-color: #181717;
+                border: 2px solid #181717;
+            }
+        }
+        .tituloDesc {
+            @include fonts;
+            font-size: 1em;
+            font-weight: 800;
+            position: absolute;
+            top: 70%;
+            left: 79%
+        }
+        .descripcion {
+            @include fonts;
+            text-align: right;
+            width: 25%;
+            font-size: 0.8em;
+            color: grey;
+            position: absolute;
+            top: 75%;
+            left: 66%;
+        }
+    }
+
+    h2 {
+        @include fonts;
+        text-align: center;
+        font-size: 2em;
+        color: grey;
+        margin-top: 8%;
+    }
+
+    .categorias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 5%;
+        margin-left: 6%;
+        .gaming {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background: linear-gradient(90deg, $azul 43%, rgb(120, 172, 214) 71%);
+            border-radius: 30px;
+            width: 37%;
+            padding: 3% 3%;
+            margin: 0 3% 3% 1%;
+            .ps5 {
+                display: block;
+                width: 230px;
+                height: auto;
+                padding-top: 5%
+            }
+            .textoGaming {
+                padding-top: 5%;
+                padding-left: 3%;
+                @include fonts;
+                .pg1 {
+                    font-size: 1.5em;
+                }
+                .pg2 {
+                    font-size: 3em;
+                    font-weight: 900;
+                    color: white
+                }
+                .gBoton {
+                    @include button;
+                    width: 50%;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    &:hover {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                }
+            }
+        }
+        .pcs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, $rojo 43%, rgb(231, 104, 104) 71%);
+            border-radius: 30px;
+            width: 37%;
+            padding: 1% 3% 0% 6%;
+            margin: 0 0% 3% 0%;
+            .textoPc {
+                @include fonts;
+                padding-left: 3%;
+                .pg1 {
+                    font-size: 1.5em;
+                }
+                .pg2 {
+                    font-size: 3em;
+                    font-weight: 900;
+                    color: white
+                }
+                .pcBoton {
+                    @include fonts;
+                    background-color: black;
+                    border-radius: 50px;
+                    border: 2px solid black;
+                    cursor: pointer;
+                    color: white;
+                    padding: 1% 1%;
+                    text-decoration: none;
+                    font-size: 1em;
+                    width: 60%;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    &:hover {
+                        background-color: $verde;
+                        border: 2px solid $verde;
+                    }
+                }
+            }
+            .mac {
+                width: 250px;
+                height: auto;
+            }
+        }
+        .vr {
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(90deg, $amarillo 43%, rgb(233, 203, 72) 71%);
+            border-radius: 30px;
+            width: 37%;
+            padding: 3% 4% 3% 2%;
+            margin: 0 2% 5% 1%;
+            .oculus {
+                width: 150px;
+                height: 150px;
+                padding-top: 10%;
+                padding-left: 10%;
+            }
+            .textoVr {
+                padding-top: 5%;
+                padding-left: 3%;
+                @include fonts;
+                .pg1 {
+                    font-size: 1.5em;
+                }
+                .pg2 {
+                    font-size: 3em;
+                    font-weight: 900;
+                    color: white
+                }
+                .gBoton {
+                    @include button;
+                    width: 50%;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    &:hover {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                }
+            }
+        }
+        .smartwatch {
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(90deg, $verde 43%, rgb(128, 204, 105) 71%);
+            border-radius: 30px;
+            width: 37%;
+            padding: 3% 7% 3% 2% ;
+            margin: 0 3% 5% 1%;
+            .watch {
+                display: block;
+                width: 200px;
+                height: 200px;
+                padding-top: 0%;
+                padding-left: 15%;
+            }
+            .textoSmart {
+                padding-top: 5%;
+                padding-left: 3%;
+                @include fonts;
+                .pg1 {
+                    font-size: 1.5em;
+                }
+                .pg2 {
+                    font-size: 3em;
+                    font-weight: 900;
+                    color: white
+                }
+                .gBoton {
+                    @include button;
+                    width: 70%;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                    &:hover {
+                        background-color: black;
+                        border: 2px solid black;
+                    }
+                }
+            }
+        }
+ 
+    }
+
+    .ventajas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 8%;
+        margin-top: 2%;
+        .envio {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 2%;
+            margin-right: 2%;
+            width: 20%;
+            .iconos {
+                width: 50px;
+                height: 50px;
+                margin-right: 6%
+            }
+            .textoIconos {
+                @include fonts;
+                .pnIcon {
+                    font-weight: 800;
+                    font-size: 0.8em;
+                }
+                .psIcon {
+                    color: grey;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $rojo;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-top: 13%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 30px;
+        position: relative;
+        .cajaBanner1 {
+            padding-left: 5%;
+            .airpods {
+                width: 350px;
+                height: auto;
+                position: absolute;
+                top: -50%;
+                left: 30%;
+            }
+            .pb1 {
+                @include fonts;
+                font-size: 3em;
+                font-weight: 800;
+                color: white
+            }
+            .pb2 {
+                @include fonts;
+                color: white;
+            }
+        }
+        .cajaBanner2 {
+            width: 30%;
+            padding-right: 5%;
+            .pb3 {
+                @include fonts;
+                color: white;
+                font-weight: 800;
+            }
+            .pb4 {
+                @include fonts;
+                color: white;
+                font-weight: 800;
+                font-size: 2.2em;
+            }
+            .pb2 {
+                @include fonts;
+                color: white;
+                font-size: 0.8em;
+            }
+            .pcBoton {
+                @include fonts;
+                background-color: white;
+                border-radius: 50px;
+                border: 2px solid white;
+                cursor: pointer;
+                color: $rojo;
+                padding: 1% 1%;
+                text-decoration: none;
+                font-size: 1em;
+                width: 50%;
+                margin-top: 8%;
+                a {
+                    text-decoration: none;
+                    color: $rojo;
+                }
+                &:hover {
+                    background-color: black;
+                    border: 2px solid black;
+                }
+            }
+        }
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 3%;
+        .producto1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(224, 222, 222);
+            border-radius: 15px;
+            width: 20%;
+            margin-top: 5%;
+            margin-right: 3%;
+            padding: 2%;
+            .imgP {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20%;
+            }
+            .pb2 {
+                @include fonts;
+                color: black;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    &:hover {
+                        color: $rojo;
+                    }
+                }
+            }
+            .pb3 {
+                @include fonts;
+                color: black;
+                font-weight: 800;
+                margin-top: 8%;
+            }
+        }
+    }
+
+    .banner2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $verde;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-top: 16%;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 30px;
+        position: relative;
+        .cajaBanner1 {
+            padding-left: 5%;
+            .switch {
+                width: 500px;
+                height: auto;
+                position: absolute;
+                top: -50%;
+                left: 25%;
+            }
+            .pb1 {
+                @include fonts;
+                font-size: 3em;
+                font-weight: 800;
+                color: white
+            }
+            .pb2 {
+                @include fonts;
+                color: white;
+            }
+        }
+        .cajaBanner2 {
+            width: 30%;
+            padding-right: 5%;
+            .pb3 {
+                @include fonts;
+                color: white;
+                font-weight: 800;
+            }
+            .pb4 {
+                @include fonts;
+                color: white;
+                font-weight: 800;
+                font-size: 2.2em;
+            }
+            .pb2 {
+                @include fonts;
+                color: white;
+                font-size: 0.8em;
+            }
+            .pcBoton {
+                @include fonts;
+                background-color: white;
+                border-radius: 50px;
+                border: 2px solid white;
+                cursor: pointer;
+                color: $rojo;
+                padding: 1% 1%;
+                text-decoration: none;
+                font-size: 1em;
+                width: 50%;
+                margin-top: 8%;
+                a {
+                    text-decoration: none;
+                    color: $verde;
+                }
+                &:hover {
+                    background-color: black;
+                    border: 2px solid black;
+                }
+            }
+        }
+    }
+
+    h2 {
+        @include fonts;
+        text-align: center;
+        font-size: 2em;
+        color: grey;
+        margin-top: 8%;
+    }
+    .marcas {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        padding: 3% 3%;
+        background-color: rgb(224, 222, 222);
+        .imgMarcas {
+            width: 200px;
+            height: 200px;
+            margin-right: 2%;
+        }
+    }
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding: 3% 6%;
+    border-top: 2px solid grey;
+    .cajaTienda {
+        width: 30%;
+        .pb2 {
+            @include fonts;
+            color: gray;
+            margin-bottom: 15%;
+        }    
+        .logo2 {
+            width: 200px;
+            height: auto;
+            margin-bottom: 15%;
+        }
+        .redes {
+            display: flex;
+            flex-direction: row;
+            a {
+                margin-right: 5%;
+                .imgRedes {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .cajaLinks {
+        width: 30%;
+        margin-left: 18%;
+        margin-top: 1%;
+        .pb3 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 10%;
+            font-size: 1.2em;
+        }
+        .navList {
+            list-style: none;
+            .aLista {
+                @include fonts;
+                color: grey;
+                text-decoration: none;
+                font-weight: 800;
+                &:hover {
+                    color: $rojo;
+                }
+            }
+        }
+    }
+
+    .cajaContacto {
+        width: 30%;
+        margin-left: 12%;
+        margin-top: 1%;
+        .pb3 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 10%;
+            font-size: 1.2em;
+        }
+        .pb2 {
+            @include fonts;
+            color: gray;
+            margin-bottom: 2%;
+        } 
+        .pb7 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 3%;
+            font-size: 1em;
+        }
+    }
+}
+
+//mediaqueries
+
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1024px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: block;
+            i {
+                color: grey;
+            }
+        }
+    }
+    main {
+        .flyer {
+            .p3 {
+                font-size: 6em;
+            }
+            .tituloDesc {
+                left: 76%;
+            }
+        }
+
+        .categorias {
+            .gaming {
+                .ps5 {
+                    width: 150px;
+                    height: 110px;
+                }
+                .textoGaming {
+                    .pg1 {
+                        font-size: 1.2em;
+                    }
+                    .pg2 {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+            .pcs {
+                .mac {
+                    width: 170px;
+                    height: 150px;
+                }
+                .textoPc {
+                    .pg1 {
+                        font-size: 1.2em;
+                    }
+                    .pg2 {
+                        font-size: 2.5em;
+                    }
+                }
+            }
+            .vr {
+                .oculus {
+                    width: 130px;
+                    height: 130px;
+                }
+                .textoVr {
+                    .pg1 {
+                        font-size: 1.2em;
+                    }
+                    .pg2 {
+                        font-size: 2.5em;
+                    }
+                    .gBoton {
+                        width: 60%;
+                    }
+                }
+            }
+            .smartwatch {
+                .watch {
+                    width: 160px;
+                    height: 160px;
+                }
+                .textoSmart {
+                    .pg1 {
+                        font-size: 1.2em;
+                    }
+                    .pg2 {
+                        font-size: 2.5em;
+                    }
+                    .gBoton {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+        
+        .ventajas {
+            .envio {
+                margin-left: 1%;
+                margin-right: 1%;
+                .iconos {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .banner {
+            .cajaBanner1 {
+                .airpods {
+                    top: -58%;
+                    left: 26%;
+                }
+            }
+        }
+
+        .banner2 {
+            .cajaBanner1 {
+                .switch {
+                    width: 400px;
+                    height: auto;
+                    top: -44%;
+                    left: 26%;
+                }
+            }
+        }
+
+        .marcas {
+            .imgMarcas {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
+
+
+

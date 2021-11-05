@@ -1,0 +1,972 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header h1 {
+  display: none;
+}
+
+header .aLogo {
+  margin: 2% 2% 2% 5%;
+}
+
+header .aLogo .logo {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+header .menu {
+  margin: 3% 1%;
+  width: 90%;
+  position: relative;
+}
+
+header .menu .navList {
+  display: inline;
+}
+
+header .menu .navList .aLista {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 800;
+  color: #757272;
+  padding: 2% 3%;
+  font-size: 0.9em;
+}
+
+header .menu .navList .aLista:hover {
+  color: #F22E3E;
+  border-bottom: 4px solid #F22E3E;
+}
+
+header .menu2 {
+  display: none;
+  position: absolute;
+  max-width: 160px;
+  padding: 2%;
+  top: 3%;
+  left: 80%;
+  z-index: 5;
+}
+
+header .menu2 .navList {
+  display: inline;
+}
+
+header .menu2 .navList .aLista {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 800;
+  color: #757272;
+  padding: 2% 3%;
+  font-size: 0.9em;
+}
+
+header .menu2 .navList .aLista:hover {
+  color: #F22E3E;
+  border-bottom: 4px solid #F22E3E;
+}
+
+main .flyer {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, color-stop(43%, #afaeae), color-stop(71%, #dbd9d9));
+  background: linear-gradient(90deg, #afaeae 43%, #dbd9d9 71%);
+  margin: 1% 5%;
+  padding: 1% 3% 20% 3%;
+  border-radius: 30px;
+}
+
+main .flyer .imgFlyer {
+  width: 35%;
+  height: auto;
+  margin-left: 40%;
+  padding-top: 5%;
+}
+
+main .flyer .p1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+
+main .flyer .p2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4em;
+  font-weight: 800;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+main .flyer .p3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 8em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+main .flyer button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F22E3E;
+  border-radius: 50px;
+  border: 2px solid #F22E3E;
+  cursor: pointer;
+  color: white;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  width: 20%;
+}
+
+main .flyer button a {
+  text-decoration: none;
+  color: white;
+}
+
+main .flyer button:hover {
+  background-color: #181717;
+  border: 2px solid #181717;
+}
+
+main .flyer .tituloDesc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  position: absolute;
+  top: 70%;
+  left: 79%;
+}
+
+main .flyer .descripcion {
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+  width: 25%;
+  font-size: 0.8em;
+  color: grey;
+  position: absolute;
+  top: 75%;
+  left: 66%;
+}
+
+main h2 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 2em;
+  color: grey;
+  margin-top: 8%;
+}
+
+main .categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 5%;
+  margin-left: 6%;
+}
+
+main .categorias .gaming {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(43%, #168BF2), color-stop(71%, #78acd6));
+  background: linear-gradient(90deg, #168BF2 43%, #78acd6 71%);
+  border-radius: 30px;
+  width: 37%;
+  padding: 3% 3%;
+  margin: 0 3% 3% 1%;
+}
+
+main .categorias .gaming .ps5 {
+  display: block;
+  width: 230px;
+  height: auto;
+  padding-top: 5%;
+}
+
+main .categorias .gaming .textoGaming {
+  padding-top: 5%;
+  padding-left: 3%;
+  font-family: 'Poppins', sans-serif;
+}
+
+main .categorias .gaming .textoGaming .pg1 {
+  font-size: 1.5em;
+}
+
+main .categorias .gaming .textoGaming .pg2 {
+  font-size: 3em;
+  font-weight: 900;
+  color: white;
+}
+
+main .categorias .gaming .textoGaming .gBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F22E3E;
+  border-radius: 50px;
+  border: 2px solid #F22E3E;
+  cursor: pointer;
+  color: white;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 50%;
+}
+
+main .categorias .gaming .textoGaming .gBoton a {
+  text-decoration: none;
+  color: white;
+}
+
+main .categorias .gaming .textoGaming .gBoton:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+main .categorias .pcs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(43%, #F22E3E), color-stop(71%, #e76868));
+  background: linear-gradient(90deg, #F22E3E 43%, #e76868 71%);
+  border-radius: 30px;
+  width: 37%;
+  padding: 1% 3% 0% 6%;
+  margin: 0 0% 3% 0%;
+}
+
+main .categorias .pcs .textoPc {
+  font-family: 'Poppins', sans-serif;
+  padding-left: 3%;
+}
+
+main .categorias .pcs .textoPc .pg1 {
+  font-size: 1.5em;
+}
+
+main .categorias .pcs .textoPc .pg2 {
+  font-size: 3em;
+  font-weight: 900;
+  color: white;
+}
+
+main .categorias .pcs .textoPc .pcBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  border-radius: 50px;
+  border: 2px solid black;
+  cursor: pointer;
+  color: white;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 60%;
+}
+
+main .categorias .pcs .textoPc .pcBoton a {
+  text-decoration: none;
+  color: white;
+}
+
+main .categorias .pcs .textoPc .pcBoton:hover {
+  background-color: #2CBF60;
+  border: 2px solid #2CBF60;
+}
+
+main .categorias .pcs .mac {
+  width: 250px;
+  height: auto;
+}
+
+main .categorias .vr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, right top, color-stop(43%, #F2AE2E), color-stop(71%, #e9cb48));
+  background: linear-gradient(90deg, #F2AE2E 43%, #e9cb48 71%);
+  border-radius: 30px;
+  width: 37%;
+  padding: 3% 4% 3% 2%;
+  margin: 0 2% 5% 1%;
+}
+
+main .categorias .vr .oculus {
+  width: 150px;
+  height: 150px;
+  padding-top: 10%;
+  padding-left: 10%;
+}
+
+main .categorias .vr .textoVr {
+  padding-top: 5%;
+  padding-left: 3%;
+  font-family: 'Poppins', sans-serif;
+}
+
+main .categorias .vr .textoVr .pg1 {
+  font-size: 1.5em;
+}
+
+main .categorias .vr .textoVr .pg2 {
+  font-size: 3em;
+  font-weight: 900;
+  color: white;
+}
+
+main .categorias .vr .textoVr .gBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F22E3E;
+  border-radius: 50px;
+  border: 2px solid #F22E3E;
+  cursor: pointer;
+  color: white;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 50%;
+}
+
+main .categorias .vr .textoVr .gBoton a {
+  text-decoration: none;
+  color: white;
+}
+
+main .categorias .vr .textoVr .gBoton:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+main .categorias .smartwatch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, right top, color-stop(43%, #2CBF60), color-stop(71%, #80cc69));
+  background: linear-gradient(90deg, #2CBF60 43%, #80cc69 71%);
+  border-radius: 30px;
+  width: 37%;
+  padding: 3% 7% 3% 2%;
+  margin: 0 3% 5% 1%;
+}
+
+main .categorias .smartwatch .watch {
+  display: block;
+  width: 200px;
+  height: 200px;
+  padding-top: 0%;
+  padding-left: 15%;
+}
+
+main .categorias .smartwatch .textoSmart {
+  padding-top: 5%;
+  padding-left: 3%;
+  font-family: 'Poppins', sans-serif;
+}
+
+main .categorias .smartwatch .textoSmart .pg1 {
+  font-size: 1.5em;
+}
+
+main .categorias .smartwatch .textoSmart .pg2 {
+  font-size: 3em;
+  font-weight: 900;
+  color: white;
+}
+
+main .categorias .smartwatch .textoSmart .gBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F22E3E;
+  border-radius: 50px;
+  border: 2px solid #F22E3E;
+  cursor: pointer;
+  color: white;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 70%;
+}
+
+main .categorias .smartwatch .textoSmart .gBoton a {
+  text-decoration: none;
+  color: white;
+}
+
+main .categorias .smartwatch .textoSmart .gBoton:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+main .ventajas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 8%;
+  margin-top: 2%;
+}
+
+main .ventajas .envio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  width: 20%;
+}
+
+main .ventajas .envio .iconos {
+  width: 50px;
+  height: 50px;
+  margin-right: 6%;
+}
+
+main .ventajas .envio .textoIconos {
+  font-family: 'Poppins', sans-serif;
+}
+
+main .ventajas .envio .textoIconos .pnIcon {
+  font-weight: 800;
+  font-size: 0.8em;
+}
+
+main .ventajas .envio .textoIconos .psIcon {
+  color: grey;
+  font-size: 0.8em;
+}
+
+main .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #F22E3E;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 13%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 30px;
+  position: relative;
+}
+
+main .banner .cajaBanner1 {
+  padding-left: 5%;
+}
+
+main .banner .cajaBanner1 .airpods {
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: -50%;
+  left: 30%;
+}
+
+main .banner .cajaBanner1 .pb1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  color: white;
+}
+
+main .banner .cajaBanner1 .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+main .banner .cajaBanner2 {
+  width: 30%;
+  padding-right: 5%;
+}
+
+main .banner .cajaBanner2 .pb3 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 800;
+}
+
+main .banner .cajaBanner2 .pb4 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: 2.2em;
+}
+
+main .banner .cajaBanner2 .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 0.8em;
+}
+
+main .banner .cajaBanner2 .pcBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  color: #F22E3E;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 50%;
+  margin-top: 8%;
+}
+
+main .banner .cajaBanner2 .pcBoton a {
+  text-decoration: none;
+  color: #F22E3E;
+}
+
+main .banner .cajaBanner2 .pcBoton:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+main .productos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 3%;
+}
+
+main .productos .producto1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e0dede;
+  border-radius: 15px;
+  width: 20%;
+  margin-top: 5%;
+  margin-right: 3%;
+  padding: 2%;
+}
+
+main .productos .producto1 .imgP {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20%;
+}
+
+main .productos .producto1 .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+main .productos .producto1 .pb2 a {
+  text-decoration: none;
+  color: black;
+}
+
+main .productos .producto1 .pb2 a:hover {
+  color: #F22E3E;
+}
+
+main .productos .producto1 .pb3 {
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  font-weight: 800;
+  margin-top: 8%;
+}
+
+main .banner2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #2CBF60;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 16%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 30px;
+  position: relative;
+}
+
+main .banner2 .cajaBanner1 {
+  padding-left: 5%;
+}
+
+main .banner2 .cajaBanner1 .switch {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  top: -50%;
+  left: 25%;
+}
+
+main .banner2 .cajaBanner1 .pb1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  font-weight: 800;
+  color: white;
+}
+
+main .banner2 .cajaBanner1 .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+main .banner2 .cajaBanner2 {
+  width: 30%;
+  padding-right: 5%;
+}
+
+main .banner2 .cajaBanner2 .pb3 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 800;
+}
+
+main .banner2 .cajaBanner2 .pb4 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 800;
+  font-size: 2.2em;
+}
+
+main .banner2 .cajaBanner2 .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-size: 0.8em;
+}
+
+main .banner2 .cajaBanner2 .pcBoton {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  border-radius: 50px;
+  border: 2px solid white;
+  cursor: pointer;
+  color: #F22E3E;
+  padding: 1% 1%;
+  text-decoration: none;
+  font-size: 1em;
+  width: 50%;
+  margin-top: 8%;
+}
+
+main .banner2 .cajaBanner2 .pcBoton a {
+  text-decoration: none;
+  color: #2CBF60;
+}
+
+main .banner2 .cajaBanner2 .pcBoton:hover {
+  background-color: black;
+  border: 2px solid black;
+}
+
+main h2 {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  font-size: 2em;
+  color: grey;
+  margin-top: 8%;
+}
+
+main .marcas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3%;
+  padding: 3% 3%;
+  background-color: #e0dede;
+}
+
+main .marcas .imgMarcas {
+  width: 200px;
+  height: 200px;
+  margin-right: 2%;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 5%;
+  padding: 3% 6%;
+  border-top: 2px solid grey;
+}
+
+footer .cajaTienda {
+  width: 30%;
+}
+
+footer .cajaTienda .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: gray;
+  margin-bottom: 15%;
+}
+
+footer .cajaTienda .logo2 {
+  width: 200px;
+  height: auto;
+  margin-bottom: 15%;
+}
+
+footer .cajaTienda .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .cajaTienda .redes a {
+  margin-right: 5%;
+}
+
+footer .cajaTienda .redes a .imgRedes {
+  width: 30px;
+  height: 30px;
+}
+
+footer .cajaLinks {
+  width: 30%;
+  margin-left: 18%;
+  margin-top: 1%;
+}
+
+footer .cajaLinks .pb3 {
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+  font-weight: 800;
+  margin-bottom: 10%;
+  font-size: 1.2em;
+}
+
+footer .cajaLinks .navList {
+  list-style: none;
+}
+
+footer .cajaLinks .navList .aLista {
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+footer .cajaLinks .navList .aLista:hover {
+  color: #F22E3E;
+}
+
+footer .cajaContacto {
+  width: 30%;
+  margin-left: 12%;
+  margin-top: 1%;
+}
+
+footer .cajaContacto .pb3 {
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+  font-weight: 800;
+  margin-bottom: 10%;
+  font-size: 1.2em;
+}
+
+footer .cajaContacto .pb2 {
+  font-family: 'Poppins', sans-serif;
+  color: gray;
+  margin-bottom: 2%;
+}
+
+footer .cajaContacto .pb7 {
+  font-family: 'Poppins', sans-serif;
+  color: grey;
+  font-weight: 800;
+  margin-bottom: 3%;
+  font-size: 1em;
+}
+
+@media (max-width: 1024px) {
+  header .menu {
+    display: none;
+  }
+  header .menu2 {
+    display: block;
+  }
+  header .menu2 i {
+    color: grey;
+  }
+  main .flyer .p3 {
+    font-size: 6em;
+  }
+  main .flyer .tituloDesc {
+    left: 76%;
+  }
+  main .categorias .gaming .ps5 {
+    width: 150px;
+    height: 110px;
+  }
+  main .categorias .gaming .textoGaming .pg1 {
+    font-size: 1.2em;
+  }
+  main .categorias .gaming .textoGaming .pg2 {
+    font-size: 2.5em;
+  }
+  main .categorias .pcs .mac {
+    width: 170px;
+    height: 150px;
+  }
+  main .categorias .pcs .textoPc .pg1 {
+    font-size: 1.2em;
+  }
+  main .categorias .pcs .textoPc .pg2 {
+    font-size: 2.5em;
+  }
+  main .categorias .vr .oculus {
+    width: 130px;
+    height: 130px;
+  }
+  main .categorias .vr .textoVr .pg1 {
+    font-size: 1.2em;
+  }
+  main .categorias .vr .textoVr .pg2 {
+    font-size: 2.5em;
+  }
+  main .categorias .vr .textoVr .gBoton {
+    width: 60%;
+  }
+  main .categorias .smartwatch .watch {
+    width: 160px;
+    height: 160px;
+  }
+  main .categorias .smartwatch .textoSmart .pg1 {
+    font-size: 1.2em;
+  }
+  main .categorias .smartwatch .textoSmart .pg2 {
+    font-size: 2.5em;
+  }
+  main .categorias .smartwatch .textoSmart .gBoton {
+    width: 90%;
+  }
+  main .ventajas .envio {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  main .ventajas .envio .iconos {
+    width: 40px;
+    height: 40px;
+  }
+  main .banner .cajaBanner1 .airpods {
+    top: -58%;
+    left: 26%;
+  }
+  main .banner2 .cajaBanner1 .switch {
+    width: 400px;
+    height: auto;
+    top: -44%;
+    left: 26%;
+  }
+  main .marcas .imgMarcas {
+    width: 150px;
+    height: 150px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -48,7 +48,6 @@ header {
     .menu {
         margin: 3% 1%;
         width: 90%;
-        position: relative;
         .navList {
             display: inline;
             .aLista {
@@ -68,26 +67,44 @@ header {
     }
     .menu2 {
         display: none;
-        position: absolute;
-        max-width: 160px;
-        padding: 2%;
-        top: 3%;
-        left: 80%;
-        z-index: 5;
-        .navList {
-            display: inline;
-            .aLista {
-            @include fonts;
-            text-decoration: none;
-            list-style: none;
-            font-weight: 800;
-            color: rgb(117, 114, 114);
-            padding: 2% 3%;
-            font-size: 0.9em;
+        position: relative;
+        width: 90%;
+        &:hover .dropdown {
+            display: block;
+        }
+        i {
+            font-size: 2em;
+            position: absolute;
+            top: 35%;
+            left: 85%;
+            color: grey;
             &:hover {
-                color: $rojo;
-                border-bottom: 4px solid $rojo;
+                color: white;
             }
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 70%;
+            width: 20%;
+            padding: 2%;
+            z-index: 5;
+            background-color: $rojo;
+            .navList {
+                list-style: none;
+                padding: 5% 5%;
+                .aLista {
+                @include fonts;
+                text-decoration: none;
+                list-style: none;
+                font-weight: 800;
+                color: white;
+                font-size: 0.9em;
+                &:hover {
+                    color: black;
+                }
+                }
             }
         }
     }
@@ -683,11 +700,6 @@ footer {
 }
 
 //mediaqueries
-
-@media (max-width: 1440px) {
-
-}
-
 @media (max-width: 1024px) {
     header {
         .menu {
@@ -695,9 +707,6 @@ footer {
         }
         .menu2 {
             display: block;
-            i {
-                color: grey;
-            }
         }
     }
     main {
@@ -795,6 +804,15 @@ footer {
             }
         }
 
+        .productos {
+            .producto1 {
+                .imgP {
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+        }
+
         .banner2 {
             .cajaBanner1 {
                 .switch {
@@ -810,6 +828,549 @@ footer {
             .imgMarcas {
                 width: 150px;
                 height: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: inline-block;
+            .dropdown {
+                .navList {
+                    .aLista {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        .flyer {
+            .p2 {
+                font-size: 3.5em;
+            }
+            .p3 {
+                font-size: 5em;
+                top: 42%;
+            }
+            button {
+                font-size: 0.8em;
+                top: 70%;
+            }
+            .tituloDesc {
+                font-size: 0.8em;
+                left: 75%;
+            }
+            .descripcion {
+                font-size: 0.7em;
+            }
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+
+        .categorias {
+            .gaming {
+                .ps5 {
+                    width: 120px;
+                    height: 90px;
+                }
+                .textoGaming {
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .gBoton {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            .pcs {
+                .mac {
+                    width: 120px;
+                    height: 100px;
+                }
+                .textoPc {
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .pcBoton {
+                        font-size: 0.8em;
+                        width: 70%;
+                    }
+                }
+            }
+            .vr {
+                .oculus {
+                    width: 100px;
+                    height: 80px;
+                }
+                .textoVr {
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .gBoton {
+                        font-size: 0.8em;
+                        width: 60%;
+                    }
+                }
+            }
+            .smartwatch {
+                .watch {
+                    width: 120px;
+                    height: 120px;
+                }
+                .textoSmart {
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .gBoton {
+                        font-size: 0.8em;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+        
+        .ventajas {
+            .envio {
+                margin-left: 1%;
+                margin-right: 1%;
+                .iconos {
+                    width: 30px;
+                    height: 30px;
+                }
+                .textoIconos {
+                    .pnIcon {
+                        font-size: 0.7em;
+                    }
+                    .psIcon {
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .banner {
+            .cajaBanner1 {
+                .airpods {
+                    width: 250px;
+                    height: auto;
+                    top: -33%;
+                    left: 28%;
+                }
+                .pb1 {
+                    font-size: 2.5em;
+                }
+                .pb2 {
+                    font-size: 0.8em;
+                }
+            }
+            .cajaBanner2 {
+                .pb4 {
+                    font-size: 1.7em;
+                }
+                .pb2 {
+                    font-size: 0.7em;
+                }
+                .pcBoton {
+                    font-size: 0.8em;
+                    width: 70%;
+                }
+            }
+        }
+
+        .productos {
+            .producto1 {
+                .imgP {
+                    width: 100px;
+                    height: 100px;
+                }
+                .pb2 {
+                    font-size: 0.8em;
+                }
+            }
+        }
+
+        .banner2 {
+            .cajaBanner1 {
+                .switch {
+                    width: 300px;
+                    height: auto;
+                    top: -38%;
+                    left: 26%;
+                }
+                .pb1 {
+                    font-size: 2.5em;
+                }
+                .pb2 {
+                    font-size: 0.8em;
+                }
+            }
+            .cajaBanner2 {
+                .pb4 {
+                    font-size: 1.7em;
+                }
+                .pb2 {
+                    font-size: 0.7em;
+                }
+                .pcBoton {
+                    font-size: 0.8em;
+                    width: 70%;
+                }
+            }
+        }
+
+        .marcas {
+            .imgMarcas {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+
+    footer {
+        .cajaTienda {
+            .pb2 {
+                font-size: 0.8em;
+            }
+        }
+        .cajaLinks {
+            margin-left: 14%;
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .navList {
+                font-size: 0.8em;
+            }
+        }
+        .cajaContacto {
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .pb7 {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: inline-block;
+            i {
+                font-size: 1.7em;
+                left: 82%;
+            }
+            .dropdown {
+                width: 50%;
+                left: 55%;
+                .navList {
+                    .aLista {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        .flyer {
+            padding-bottom: 25%;
+            .imgFlyer {
+                width: 45%;
+            }
+            .p1 {
+                font-size: 1.2em;
+            }
+            .p2 {
+                font-size: 2.8em;
+            }
+            .p3 {
+                font-size: 3em;
+                top: 46%;
+            }
+            button {
+                font-size: 0.7em;
+                top: 70%;
+                width: 28%;
+            }
+            .tituloDesc {
+                font-size: 0.7em;
+                left: 73%;
+            }
+            .descripcion {
+                font-size: 0.7em;
+                width: 42%;
+                left: 54%;
+            }
+        }
+
+        h2 {
+            font-size: 1.4em;
+        }
+
+        .categorias {
+            flex-direction: column;
+            margin-left: 4%;
+            .gaming {
+                width: 90%;
+                margin-left: 0;
+                .ps5 {
+                    width: 150px;
+                    height: 110px;
+                }
+                .textoGaming {
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .gBoton {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+            .pcs {
+                width: 90%;
+                padding-right: 1%;
+                padding-top: 4%;
+                padding-bottom: 4%;
+                .mac {
+                    width: 140px;
+                    height: 120px;
+                }
+                .textoPc {
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .pcBoton {
+                        font-size: 0.8em;
+                        width: 70%;
+                    }
+                }
+            }
+            .vr {
+                width: 90%;
+                padding-right: 5%;
+                padding-top: 3%;
+                padding-bottom: 3%;
+                margin-right: 3%;
+                margin-left: 0;
+                margin-bottom: 3%;
+                .oculus {
+                    width: 130px;
+                    height: 100px;
+                    padding-top: 7%;
+                    padding-left: 13%;
+                }
+                .textoVr {
+                    padding-left: 15%;
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .gBoton {
+                        font-size: 0.8em;
+                        width: 60%;
+                    }
+                }
+            }
+            .smartwatch {
+                width: 88%;
+                margin-right: 1%;
+                margin-left: 0;
+                padding-top: 4%;
+                padding-bottom: 4%;
+                .watch {
+                    width: 125px;
+                    height: 125px;
+                }
+                .textoSmart {
+                    padding-left: 15%;
+                    padding-right: 4%;
+                    padding-bottom: 3%;
+                    .pg1 {
+                        font-size: 1em;
+                    }
+                    .pg2 {
+                        font-size: 1.8em;
+                    }
+                    .gBoton {
+                        font-size: 0.8em;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+        
+        .ventajas {
+            .envio {
+                margin-left: 1%;
+                margin-right: 1%;
+                width: 22%;
+                .iconos {
+                    width: 20px;
+                    height: 20px;
+                }
+                .textoIconos {
+                    .pnIcon {
+                        font-size: 0.7em;
+                    }
+                    .psIcon {
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .banner {
+            .cajaBanner1 {
+                .airpods {
+                    width: 215px;
+                    height: auto;
+                    top: -4%;
+                    left: 20%;
+                }
+                .pb1 {
+                    font-size: 2em;
+                }
+                .pb2 {
+                    font-size: 0.8em;
+                    width: 60%;
+                }
+            }
+            .cajaBanner2 {
+                .pb4 {
+                    font-size: 1.7em;
+                }
+                .pb2 {
+                    font-size: 0.7em;
+                }
+                .pcBoton {
+                    font-size: 0.7em;
+                    width: 70%;
+                }
+            }
+        }
+
+        .productos {
+            flex-wrap: wrap;
+            .producto1 {
+                width: 30%;
+                .imgP {
+                    width: 100px;
+                    height: 100px;
+                }
+                .pb2 {
+                    font-size: 0.7em;
+                }
+            }
+        }
+
+        .banner2 {
+            .cajaBanner1 {
+                .switch {
+                    width: 300px;
+                    height: auto;
+                    top: 17%;
+                    left: -1%;
+                }
+                .pb1 {
+                    font-size: 2em;
+                }
+                .pb2 {
+                    font-size: 0.8em;
+                    width: 60%;
+                }
+            }
+            .cajaBanner2 {
+                .pb4 {
+                    font-size: 1.7em;
+                }
+                .pb2 {
+                    font-size: 0.7em;
+                }
+                .pcBoton {
+                    font-size: 0.8em;
+                    width: 80%;
+                }
+            }
+        }
+
+        .marcas {
+            .imgMarcas {
+                width: 75px;
+                height: 75px;
+                margin-right: 1%;
+            }
+        }
+    }
+
+    footer {
+        .cajaTienda {
+            .logo2 {
+                width: 180px;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .redes {
+               a {
+                .imgRedes {
+                    width: 20px;
+                    height: 20px;
+                }
+                }
+            } 
+        }
+        .cajaLinks {
+            margin-left: 19%;
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .navList {
+                font-size: 0.8em;
+            }
+        }
+        .cajaContacto {
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .pb7 {
+                font-size: 0.8em;
             }
         }
     }

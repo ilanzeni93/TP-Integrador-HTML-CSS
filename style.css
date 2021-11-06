@@ -27,7 +27,6 @@ header .aLogo .logo {
 header .menu {
   margin: 3% 1%;
   width: 90%;
-  position: relative;
 }
 
 header .menu .navList {
@@ -51,31 +50,53 @@ header .menu .navList .aLista:hover {
 
 header .menu2 {
   display: none;
+  position: relative;
+  width: 90%;
+}
+
+header .menu2:hover .dropdown {
+  display: block;
+}
+
+header .menu2 i {
+  font-size: 2em;
   position: absolute;
-  max-width: 160px;
+  top: 35%;
+  left: 85%;
+  color: grey;
+}
+
+header .menu2 i:hover {
+  color: white;
+}
+
+header .menu2 .dropdown {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 70%;
+  width: 20%;
   padding: 2%;
-  top: 3%;
-  left: 80%;
   z-index: 5;
+  background-color: #F22E3E;
 }
 
-header .menu2 .navList {
-  display: inline;
+header .menu2 .dropdown .navList {
+  list-style: none;
+  padding: 5% 5%;
 }
 
-header .menu2 .navList .aLista {
+header .menu2 .dropdown .navList .aLista {
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
   list-style: none;
   font-weight: 800;
-  color: #757272;
-  padding: 2% 3%;
+  color: white;
   font-size: 0.9em;
 }
 
-header .menu2 .navList .aLista:hover {
-  color: #F22E3E;
-  border-bottom: 4px solid #F22E3E;
+header .menu2 .dropdown .navList .aLista:hover {
+  color: black;
 }
 
 main .flyer {
@@ -891,9 +912,6 @@ footer .cajaContacto .pb7 {
   header .menu2 {
     display: block;
   }
-  header .menu2 i {
-    color: grey;
-  }
   main .flyer .p3 {
     font-size: 6em;
   }
@@ -958,6 +976,10 @@ footer .cajaContacto .pb7 {
     top: -58%;
     left: 26%;
   }
+  main .productos .producto1 .imgP {
+    width: 130px;
+    height: 130px;
+  }
   main .banner2 .cajaBanner1 .switch {
     width: 400px;
     height: auto;
@@ -967,6 +989,443 @@ footer .cajaContacto .pb7 {
   main .marcas .imgMarcas {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .menu {
+    display: none;
+  }
+  header .menu2 {
+    display: inline-block;
+  }
+  header .menu2 .dropdown .navList .aLista {
+    font-size: 0.8em;
+  }
+  main .flyer .p2 {
+    font-size: 3.5em;
+  }
+  main .flyer .p3 {
+    font-size: 5em;
+    top: 42%;
+  }
+  main .flyer button {
+    font-size: 0.8em;
+    top: 70%;
+  }
+  main .flyer .tituloDesc {
+    font-size: 0.8em;
+    left: 75%;
+  }
+  main .flyer .descripcion {
+    font-size: 0.7em;
+  }
+  main h2 {
+    font-size: 1.6em;
+  }
+  main .categorias .gaming .ps5 {
+    width: 120px;
+    height: 90px;
+  }
+  main .categorias .gaming .textoGaming .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .gaming .textoGaming .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .gaming .textoGaming .gBoton {
+    font-size: 0.8em;
+  }
+  main .categorias .pcs .mac {
+    width: 120px;
+    height: 100px;
+  }
+  main .categorias .pcs .textoPc .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .pcs .textoPc .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .pcs .textoPc .pcBoton {
+    font-size: 0.8em;
+    width: 70%;
+  }
+  main .categorias .vr .oculus {
+    width: 100px;
+    height: 80px;
+  }
+  main .categorias .vr .textoVr .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .vr .textoVr .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .vr .textoVr .gBoton {
+    font-size: 0.8em;
+    width: 60%;
+  }
+  main .categorias .smartwatch .watch {
+    width: 120px;
+    height: 120px;
+  }
+  main .categorias .smartwatch .textoSmart .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .smartwatch .textoSmart .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .smartwatch .textoSmart .gBoton {
+    font-size: 0.8em;
+    width: 90%;
+  }
+  main .ventajas .envio {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  main .ventajas .envio .iconos {
+    width: 30px;
+    height: 30px;
+  }
+  main .ventajas .envio .textoIconos .pnIcon {
+    font-size: 0.7em;
+  }
+  main .ventajas .envio .textoIconos .psIcon {
+    font-size: 0.7em;
+  }
+  main .banner .cajaBanner1 .airpods {
+    width: 250px;
+    height: auto;
+    top: -33%;
+    left: 28%;
+  }
+  main .banner .cajaBanner1 .pb1 {
+    font-size: 2.5em;
+  }
+  main .banner .cajaBanner1 .pb2 {
+    font-size: 0.8em;
+  }
+  main .banner .cajaBanner2 .pb4 {
+    font-size: 1.7em;
+  }
+  main .banner .cajaBanner2 .pb2 {
+    font-size: 0.7em;
+  }
+  main .banner .cajaBanner2 .pcBoton {
+    font-size: 0.8em;
+    width: 70%;
+  }
+  main .productos .producto1 .imgP {
+    width: 100px;
+    height: 100px;
+  }
+  main .productos .producto1 .pb2 {
+    font-size: 0.8em;
+  }
+  main .banner2 .cajaBanner1 .switch {
+    width: 300px;
+    height: auto;
+    top: -38%;
+    left: 26%;
+  }
+  main .banner2 .cajaBanner1 .pb1 {
+    font-size: 2.5em;
+  }
+  main .banner2 .cajaBanner1 .pb2 {
+    font-size: 0.8em;
+  }
+  main .banner2 .cajaBanner2 .pb4 {
+    font-size: 1.7em;
+  }
+  main .banner2 .cajaBanner2 .pb2 {
+    font-size: 0.7em;
+  }
+  main .banner2 .cajaBanner2 .pcBoton {
+    font-size: 0.8em;
+    width: 70%;
+  }
+  main .marcas .imgMarcas {
+    width: 110px;
+    height: 110px;
+  }
+  footer .cajaTienda .pb2 {
+    font-size: 0.8em;
+  }
+  footer .cajaLinks {
+    margin-left: 14%;
+  }
+  footer .cajaLinks .pb3 {
+    font-size: 0.9em;
+  }
+  footer .cajaLinks .navList {
+    font-size: 0.8em;
+  }
+  footer .cajaContacto .pb3 {
+    font-size: 0.9em;
+  }
+  footer .cajaContacto .pb2 {
+    font-size: 0.8em;
+  }
+  footer .cajaContacto .pb7 {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  header .menu {
+    display: none;
+  }
+  header .menu2 {
+    display: inline-block;
+  }
+  header .menu2 i {
+    font-size: 1.7em;
+    left: 82%;
+  }
+  header .menu2 .dropdown {
+    width: 50%;
+    left: 55%;
+  }
+  header .menu2 .dropdown .navList .aLista {
+    font-size: 0.8em;
+  }
+  main .flyer {
+    padding-bottom: 25%;
+  }
+  main .flyer .imgFlyer {
+    width: 45%;
+  }
+  main .flyer .p1 {
+    font-size: 1.2em;
+  }
+  main .flyer .p2 {
+    font-size: 2.8em;
+  }
+  main .flyer .p3 {
+    font-size: 3em;
+    top: 46%;
+  }
+  main .flyer button {
+    font-size: 0.7em;
+    top: 70%;
+    width: 28%;
+  }
+  main .flyer .tituloDesc {
+    font-size: 0.7em;
+    left: 73%;
+  }
+  main .flyer .descripcion {
+    font-size: 0.7em;
+    width: 42%;
+    left: 54%;
+  }
+  main h2 {
+    font-size: 1.4em;
+  }
+  main .categorias {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 4%;
+  }
+  main .categorias .gaming {
+    width: 90%;
+    margin-left: 0;
+  }
+  main .categorias .gaming .ps5 {
+    width: 150px;
+    height: 110px;
+  }
+  main .categorias .gaming .textoGaming .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .gaming .textoGaming .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .gaming .textoGaming .gBoton {
+    font-size: 0.8em;
+  }
+  main .categorias .pcs {
+    width: 90%;
+    padding-right: 1%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  main .categorias .pcs .mac {
+    width: 140px;
+    height: 120px;
+  }
+  main .categorias .pcs .textoPc .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .pcs .textoPc .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .pcs .textoPc .pcBoton {
+    font-size: 0.8em;
+    width: 70%;
+  }
+  main .categorias .vr {
+    width: 90%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-right: 3%;
+    margin-left: 0;
+    margin-bottom: 3%;
+  }
+  main .categorias .vr .oculus {
+    width: 130px;
+    height: 100px;
+    padding-top: 7%;
+    padding-left: 13%;
+  }
+  main .categorias .vr .textoVr {
+    padding-left: 15%;
+  }
+  main .categorias .vr .textoVr .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .vr .textoVr .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .vr .textoVr .gBoton {
+    font-size: 0.8em;
+    width: 60%;
+  }
+  main .categorias .smartwatch {
+    width: 88%;
+    margin-right: 1%;
+    margin-left: 0;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+  main .categorias .smartwatch .watch {
+    width: 125px;
+    height: 125px;
+  }
+  main .categorias .smartwatch .textoSmart {
+    padding-left: 15%;
+    padding-right: 4%;
+    padding-bottom: 3%;
+  }
+  main .categorias .smartwatch .textoSmart .pg1 {
+    font-size: 1em;
+  }
+  main .categorias .smartwatch .textoSmart .pg2 {
+    font-size: 1.8em;
+  }
+  main .categorias .smartwatch .textoSmart .gBoton {
+    font-size: 0.8em;
+    width: 90%;
+  }
+  main .ventajas .envio {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 22%;
+  }
+  main .ventajas .envio .iconos {
+    width: 20px;
+    height: 20px;
+  }
+  main .ventajas .envio .textoIconos .pnIcon {
+    font-size: 0.7em;
+  }
+  main .ventajas .envio .textoIconos .psIcon {
+    font-size: 0.7em;
+  }
+  main .banner .cajaBanner1 .airpods {
+    width: 215px;
+    height: auto;
+    top: -4%;
+    left: 20%;
+  }
+  main .banner .cajaBanner1 .pb1 {
+    font-size: 2em;
+  }
+  main .banner .cajaBanner1 .pb2 {
+    font-size: 0.8em;
+    width: 60%;
+  }
+  main .banner .cajaBanner2 .pb4 {
+    font-size: 1.7em;
+  }
+  main .banner .cajaBanner2 .pb2 {
+    font-size: 0.7em;
+  }
+  main .banner .cajaBanner2 .pcBoton {
+    font-size: 0.7em;
+    width: 70%;
+  }
+  main .productos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .productos .producto1 {
+    width: 30%;
+  }
+  main .productos .producto1 .imgP {
+    width: 100px;
+    height: 100px;
+  }
+  main .productos .producto1 .pb2 {
+    font-size: 0.7em;
+  }
+  main .banner2 .cajaBanner1 .switch {
+    width: 300px;
+    height: auto;
+    top: 17%;
+    left: -1%;
+  }
+  main .banner2 .cajaBanner1 .pb1 {
+    font-size: 2em;
+  }
+  main .banner2 .cajaBanner1 .pb2 {
+    font-size: 0.8em;
+    width: 60%;
+  }
+  main .banner2 .cajaBanner2 .pb4 {
+    font-size: 1.7em;
+  }
+  main .banner2 .cajaBanner2 .pb2 {
+    font-size: 0.7em;
+  }
+  main .banner2 .cajaBanner2 .pcBoton {
+    font-size: 0.8em;
+    width: 80%;
+  }
+  main .marcas .imgMarcas {
+    width: 75px;
+    height: 75px;
+    margin-right: 1%;
+  }
+  footer .cajaTienda .logo2 {
+    width: 180px;
+  }
+  footer .cajaTienda .pb2 {
+    font-size: 0.8em;
+  }
+  footer .cajaTienda .redes a .imgRedes {
+    width: 20px;
+    height: 20px;
+  }
+  footer .cajaLinks {
+    margin-left: 19%;
+  }
+  footer .cajaLinks .pb3 {
+    font-size: 0.9em;
+  }
+  footer .cajaLinks .navList {
+    font-size: 0.8em;
+  }
+  footer .cajaContacto .pb3 {
+    font-size: 0.9em;
+  }
+  footer .cajaContacto .pb2 {
+    font-size: 0.8em;
+  }
+  footer .cajaContacto .pb7 {
+    font-size: 0.8em;
   }
 }
 /*# sourceMappingURL=style.css.map */

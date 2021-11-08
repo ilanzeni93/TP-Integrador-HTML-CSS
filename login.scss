@@ -1,0 +1,434 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+
+//resets
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//variables
+$rojo: #F22E3E;
+$azul: #168BF2;
+$verde: #2CBF60;
+$amarillo: #F2AE2E;
+$gris: #c9c5c5;
+
+//mixins
+@mixin fonts {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin button {
+    @include fonts;
+    background-color: $rojo;
+    border-radius: 50px;
+    border: 2px solid $rojo;
+    cursor: pointer;
+    color: white;
+    padding: 1% 1%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+header {
+    display: flex;
+    h1 {
+        display: none;
+    }
+    .aLogo{
+        margin: 2% 2% 2% 5%;
+        .logo {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        margin: 3% 1%;
+        width: 90%;
+        .navList {
+            display: inline;
+            .aLista {
+            @include fonts;
+            text-decoration: none;
+            list-style: none;
+            font-weight: 800;
+            color: rgb(117, 114, 114);
+            padding: 2% 3%;
+            font-size: 0.9em;
+            &:hover {
+                color: $rojo;
+                border-bottom: 4px solid $rojo;
+            }
+            }
+        }
+    }
+    .menu2 {
+        display: none;
+        position: relative;
+        width: 90%;
+        &:hover .dropdown {
+            display: block;
+        }
+        i {
+            font-size: 2em;
+            position: absolute;
+            top: 35%;
+            left: 85%;
+            color: grey;
+            &:hover {
+                color: white;
+            }
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 70%;
+            width: 20%;
+            padding: 2%;
+            z-index: 5;
+            background-color: $rojo;
+            .navList {
+                list-style: none;
+                padding: 5% 5%;
+                .aLista {
+                @include fonts;
+                text-decoration: none;
+                list-style: none;
+                font-weight: 800;
+                color: white;
+                font-size: 0.9em;
+                &:hover {
+                    color: black;
+                }
+                }
+            }
+        }
+    }
+}
+
+main {
+    h2 {
+        @include fonts;
+        color: grey;
+        font-size: 2.5em;
+        text-align: center;
+        margin-top: 5%
+    }
+    form {
+        @include fonts;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        background-color: $gris;
+        width: 35%;
+        margin: auto;
+        margin-top: 4%;
+        padding: 2% 4% 4% 4%;
+        border-radius: 30px;
+        img {
+            width: 300px;
+            height: 300px;
+            margin:auto;
+        }
+        .userInfo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5%;
+            input {
+                padding: 2% 2%;
+                margin-top: 3%;
+            }
+        }
+        .userType {
+            margin-bottom: 3%;
+            input {
+                margin-right: 4%;
+            }
+        }
+        a {
+            text-decoration: none;
+            margin-left: 7%;
+            &:hover {
+                color: $rojo
+            }
+        }
+        button {
+            @include button;
+            margin-top: 8%;
+            &:hover {
+                background-color: black;
+                border: 2px solid black;
+            }
+            a {
+                margin-right: 9%;
+                text-decoration: none;
+                color: white;
+            }
+        }   
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding: 3% 6%;
+    border-top: 2px solid grey;
+    .cajaTienda {
+        width: 30%;
+        .pb2 {
+            @include fonts;
+            color: gray;
+            margin-bottom: 15%;
+        }    
+        .logo2 {
+            width: 200px;
+            height: auto;
+            margin-bottom: 15%;
+        }
+        .redes {
+            display: flex;
+            flex-direction: row;
+            a {
+                margin-right: 5%;
+                .imgRedes {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .cajaLinks {
+        width: 30%;
+        margin-left: 18%;
+        margin-top: 1%;
+        .pb3 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 10%;
+            font-size: 1.2em;
+        }
+        .navList {
+            list-style: none;
+            .aLista {
+                @include fonts;
+                color: grey;
+                text-decoration: none;
+                font-weight: 800;
+                &:hover {
+                    color: $rojo;
+                }
+            }
+        }
+    }
+
+    .cajaContacto {
+        width: 30%;
+        margin-left: 12%;
+        margin-top: 1%;
+        .pb3 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 10%;
+            font-size: 1.2em;
+        }
+        .pb2 {
+            @include fonts;
+            color: gray;
+            margin-bottom: 2%;
+        } 
+        .pb7 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 3%;
+            font-size: 1em;
+        }
+    }
+}
+
+//mediaqueries
+@media (max-width: 1024px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: block;
+        }
+    }
+
+    main {
+        h2 {
+            font-size: 2.2em;
+        }
+        form {
+            img {
+                width: 270px;
+                height: 270px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: inline-block;
+            .dropdown {
+                .navList {
+                    .aLista {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        h2 {
+            font-size: 1.8em;
+        }
+        form {
+            width: 45%;
+            padding-bottom: 5%;
+            .userInfo {
+                font-size: 0.9em;
+            }
+            .userType {
+                font-size: 0.9em;
+            }
+            img {
+                width: 250px;
+                height: 250px;
+            }
+            a {
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    footer {
+        .cajaTienda {
+            .pb2 {
+                font-size: 0.8em;
+            }
+        }
+        .cajaLinks {
+            margin-left: 14%;
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .navList {
+                font-size: 0.8em;
+            }
+        }
+        .cajaContacto {
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .pb7 {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: inline-block;
+            i {
+                font-size: 1.7em;
+                left: 82%;
+            }
+            .dropdown {
+                width: 50%;
+                left: 55%;
+                .navList {
+                    .aLista {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        h2 {
+            font-size: 1.5em;
+        }
+        form {
+            width: 60%;
+            padding-bottom: 7%;
+            img {
+                width: 220px;
+                height: 220px;
+            }
+            .userInfo {
+                font-size: 0.9em;
+            }
+            .userType {
+                font-size: 0.9em;
+            }
+            a {
+                font-size: 0.9em;
+            }
+            button {
+                font-size: 0.9em;
+            }
+        }
+    }
+    footer {
+        .cajaTienda {
+            .logo2 {
+                width: 180px;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .redes {
+               a {
+                .imgRedes {
+                    width: 20px;
+                    height: 20px;
+                }
+                }
+            } 
+        }
+        .cajaLinks {
+            margin-left: 19%;
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .navList {
+                font-size: 0.8em;
+            }
+        }
+        .cajaContacto {
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .pb7 {
+                font-size: 0.8em;
+            }
+        }
+    }
+}

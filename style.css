@@ -361,8 +361,8 @@ main .categorias .vr {
 main .categorias .vr .oculus {
   width: 150px;
   height: 150px;
-  padding-top: 10%;
-  padding-left: 10%;
+  padding-top: 6%;
+  padding-left: 3%;
 }
 
 main .categorias .vr .textoVr {
@@ -939,8 +939,10 @@ footer .cajaContacto .pb7 {
     font-size: 2.5em;
   }
   main .categorias .vr .oculus {
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
+    padding-top: 10%;
+    padding-left: 2%;
   }
   main .categorias .vr .textoVr .pg1 {
     font-size: 1.2em;

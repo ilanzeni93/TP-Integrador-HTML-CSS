@@ -1,0 +1,455 @@
+// font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+
+//resets
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//variables
+$rojo: #F22E3E;
+$azul: #168BF2;
+$verde: #2CBF60;
+$amarillo: #F2AE2E;
+$gris: #c9c5c5;
+
+//mixins
+@mixin fonts {
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin button {
+    @include fonts;
+    background-color: $rojo;
+    border-radius: 50px;
+    border: 2px solid $rojo;
+    cursor: pointer;
+    color: white;
+    padding: 1% 1%;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+header {
+    display: flex;
+    h1 {
+        display: none;
+    }
+    .aLogo{
+        margin: 2% 2% 2% 5%;
+        .logo {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+    .menu {
+        margin: 3% 1%;
+        width: 90%;
+        .navList {
+            display: inline;
+            .aLista {
+            @include fonts;
+            text-decoration: none;
+            list-style: none;
+            font-weight: 800;
+            color: rgb(117, 114, 114);
+            padding: 2% 3%;
+            font-size: 0.9em;
+            &:hover {
+                color: $rojo;
+                border-bottom: 4px solid $rojo;
+            }
+            }
+        }
+    }
+    .menu2 {
+        display: none;
+        position: relative;
+        width: 90%;
+        &:hover .dropdown {
+            display: block;
+        }
+        i {
+            font-size: 2em;
+            position: absolute;
+            top: 35%;
+            left: 85%;
+            color: grey;
+            &:hover {
+                color: white;
+            }
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 70%;
+            width: 20%;
+            padding: 2%;
+            z-index: 5;
+            background-color: $rojo;
+            .navList {
+                list-style: none;
+                padding: 5% 5%;
+                .aLista {
+                @include fonts;
+                text-decoration: none;
+                list-style: none;
+                font-weight: 800;
+                color: white;
+                font-size: 0.9em;
+                &:hover {
+                    color: black;
+                }
+                }
+            }
+        }
+    }
+}
+
+main {
+    .flyerProductos {
+        margin: 5% 6%;
+        padding: 8% 1%;
+        text-align: center;
+        background-color: $azul;
+        border-radius: 30px;
+        .tituloFlyer {
+            @include fonts;
+            color: white;
+            font-size: 5em;
+            font-weight: 900;
+        }
+    }
+
+    .cajaProductos {
+        display: flex;
+        flex-direction: row;
+        margin: 5% 5%;
+        .producto1 {
+            background-color: $gris;
+            width: 20%;
+            padding: 3% 2%;
+            margin: 0 1%;
+            text-align: center;
+            border-radius: 20px;
+            .imgProducto {
+                width: 200px;
+                height: 200px;
+            }
+            .tituloProducto {
+                @include fonts;
+                font-size: 1.2em;
+                color: black;
+                height: 15%
+            }
+            .precio {
+                @include fonts;
+                margin-top: 10%;
+                font-size: 1.5em;
+                color: black;
+                font-weight: 800;
+            }
+            .botonProducto {
+                @include button;
+                padding-top: 4%;
+                padding-bottom: 4%;
+                margin-top: 20%;
+                width: 100%;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+                &:hover {
+                    background-color: #181717;
+                    border: 2px solid #181717;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding: 3% 6%;
+    border-top: 2px solid grey;
+    .cajaTienda {
+        width: 30%;
+        .pb2 {
+            @include fonts;
+            color: gray;
+            margin-bottom: 15%;
+        }    
+        .logo2 {
+            width: 200px;
+            height: auto;
+            margin-bottom: 15%;
+        }
+        .redes {
+            display: flex;
+            flex-direction: row;
+            a {
+                margin-right: 5%;
+                .imgRedes {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .cajaLinks {
+        width: 30%;
+        margin-left: 18%;
+        margin-top: 1%;
+        .pb3 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 10%;
+            font-size: 1.2em;
+        }
+        .navList {
+            list-style: none;
+            .aLista {
+                @include fonts;
+                color: grey;
+                text-decoration: none;
+                font-weight: 800;
+                &:hover {
+                    color: $rojo;
+                }
+            }
+        }
+    }
+
+    .cajaContacto {
+        width: 30%;
+        margin-left: 12%;
+        margin-top: 1%;
+        .pb3 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 10%;
+            font-size: 1.2em;
+        }
+        .pb2 {
+            @include fonts;
+            color: gray;
+            margin-bottom: 2%;
+        } 
+        .pb7 {
+            @include fonts;
+            color: grey;
+            font-weight: 800;
+            margin-bottom: 3%;
+            font-size: 1em;
+        }
+    }
+}
+
+//mediaqueries
+@media (max-width: 1024px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: block;
+            i {
+                left: 88%;
+            }
+        }
+    }
+
+    main {
+        .cajaProductos {
+            .producto1 {
+                padding: 3% 2%;
+                .imgProducto {
+                    width: 150px;
+                    height: 150px;
+                }
+                .tituloProducto {
+                    font-size: 1em;
+                }
+                .precio {
+                    font-size: 1.3em;
+                }
+                .botonProducto {
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: inline-block;
+            i {
+                left: 85%;
+            }
+            .dropdown {
+                .navList {
+                    .aLista {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .flyerProductos {
+            .tituloFlyer {
+                font-size: 4em;
+            }
+        }
+
+        .cajaProductos {
+            flex-wrap: wrap;
+            justify-content: center;
+            .producto1 {
+                width: 35%;
+                margin: 3% 3%;
+                .botonProducto {
+                    margin-top: 13%;
+                }
+            }
+        }
+    }
+
+    footer {
+        .cajaTienda {
+            .pb2 {
+                font-size: 0.8em;
+            }
+        }
+        .cajaLinks {
+            margin-left: 14%;
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .navList {
+                font-size: 0.8em;
+            }
+        }
+        .cajaContacto {
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .pb7 {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        .menu {
+            display: none;
+        }
+        .menu2 {
+            display: inline-block;
+            i {
+                font-size: 1.7em;
+                left: 82%;
+            }
+            .dropdown {
+                width: 50%;
+                left: 55%;
+                .navList {
+                    .aLista {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .flyerProductos {
+            padding: 12% 1%;
+            .tituloFlyer {
+                font-size: 3em;
+            }
+        }
+
+        .cajaProductos {
+            flex-wrap: wrap;
+            justify-content: center;
+            .producto1 {
+                width: 65%;
+                margin: 3% 3%;
+                padding-bottom: 7%;
+                .imgProducto {
+                    width: 230px;
+                    height: 230px;
+                }
+                .tituloProducto {
+                    height: 10%;
+                }
+                .precio {
+                    margin-top: 4%;
+                }
+                .botonProducto {
+                    margin-top: 8%;
+                }
+            }
+        }
+    }
+
+
+    footer {
+        .cajaTienda {
+            .logo2 {
+                width: 180px;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .redes {
+               a {
+                .imgRedes {
+                    width: 20px;
+                    height: 20px;
+                }
+                }
+            } 
+        }
+        .cajaLinks {
+            margin-left: 19%;
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .navList {
+                font-size: 0.8em;
+            }
+        }
+        .cajaContacto {
+            .pb3 {
+                font-size: 0.9em;
+            }
+            .pb2 {
+                font-size: 0.8em;
+            }
+            .pb7 {
+                font-size: 0.8em;
+            }
+        }
+    }
+}
